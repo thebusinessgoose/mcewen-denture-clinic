@@ -1,0 +1,39 @@
+.contact-page {
+    width: 95%;
+    max-width: 750px;
+    height: 75vh;
+    background-color: lightblue;
+    margin: 0 auto;
+}
+
+.contact-header {
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon {
+    height: 25px;
+    fill: black;
+}
+
+.phone-number {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+}
+
+.email-address {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+}
