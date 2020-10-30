@@ -69,7 +69,6 @@ header {
   transition: 0.5s;
   background: white;
   border-bottom: 1px solid black;
-  font-family: "Open Sans";
 }
 /* header.sticky {
   background: white;
@@ -91,6 +90,7 @@ header ul li a {
   color: black;
   text-decoration: none;
   font-size: 22px;
+  font-family: "Open Sans";
 }
 header ul li a:hover {
   color: #1a7bfa;
