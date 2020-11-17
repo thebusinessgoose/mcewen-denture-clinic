@@ -7,22 +7,29 @@
 }
 
 section {
-  padding: 100px;
+  padding: 50px 75px;
+  background-color: rgb(247, 250, 255);
 }
 
 .banner {
   position: relative;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.7),
+      50%,
+      transparent
+    ),
     url("./assets/office-front.jpg");
+  /* background-image: url("./assets/office-front.jpg"); */
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 .banner__text-box {
-  margin-left: 50px;
+  margin-left: 75px;
+  margin-top: 125px;
 }
 .banner h2 {
   font-size: 3.5rem;
@@ -67,14 +74,15 @@ header {
   justify-content: space-between;
   align-items: center;
   transition: 0.5s;
-  background: white;
-  border-bottom: 1px solid black;
+  /* background: white; */
+  /* border-bottom: 1px solid black; */
 }
-/* header.sticky {
-  background: white;
+header.sticky {
+  background: rgba(0, 0, 0, 0.85);
   padding: 15px 75px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-} */
+  color: white;
+}
 .menu {
   position: relative;
   display: flex;
@@ -87,7 +95,7 @@ header ul li a {
   position: relative;
   display: inline-block;
   margin-left: 20px;
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 22px;
   font-family: "Open Sans";
@@ -96,9 +104,11 @@ header ul li a:hover {
   color: #1a7bfa;
 }
 header.sticky ul li a {
-  color: #111;
+  color: white;
 }
-
+header.sticky ul li a:hover {
+  color: #1a7bfa;
+}
 .logo-image {
   height: 100px;
 }
@@ -110,10 +120,10 @@ header.sticky ul li a {
 .logo {
   font-size: 1.5rem;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 header.sticky .logo {
-  color: black;
+  color: white;
 }
 .heading {
   width: 100%;
@@ -141,21 +151,27 @@ header.sticky .logo {
 }
 
 .about__content-info {
-  flex: 1;
-  margin: 1rem 0;
-  min-width: 350px;
   display: flex;
-  flex-direction: column;
-  /* text-align: justify;
-  font-size: 22px;
-  line-height: 25px; */
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  min-width: 500px;
 }
 
 .about__content-infoPoint {
   font-size: 22px;
-  line-height: 25px;
+  line-height: 30px;
   margin: 1rem 0;
+  align-items: center;
   text-align: justify;
+  width: 50%;
+  padding-right: 20px;
+  min-width: 250px;
+}
+
+.about__content-info img {
+  width: 50%;
+  min-width: 250px;
+  object-fit: cover;
 }
 
 .about__content-info h3 {
@@ -172,6 +188,36 @@ header.sticky .logo {
 .about__content-images img {
   width: 50%;
   object-fit: cover;
+}
+
+.about__content-extraInfo {
+  display: flex;
+  margin: 1rem auto;
+  width: 90%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about__content-subPoint {
+  width: 45%;
+  height: 300px;
+  min-width: 300px;
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+.about__content-subPoint p {
+  font-size: 22px;
+  padding: 10px 15px;
+  height: 25%;
+}
+.about__content-subPoint img {
+  height: 75%;
+  width: 90%;
+  object-fit: contain;
 }
 
 .content {
@@ -195,9 +241,14 @@ header.sticky .logo {
   margin-left: 20px;
 }
 
+.certificate {
+  width: 200px;
+  object-fit: contain;
+}
+
 /* --------- image --------- */
 .dabc-logo {
-  width: 200px;
+  width: 300px;
   margin: 1rem auto;
 }
 .dabc-logo img {
@@ -208,7 +259,7 @@ header.sticky .logo {
 /* ------------ services ------------- */
 
 .services {
-  background: #f7f7f7;
+  background-color: rgb(247, 250, 255);
 }
 .heading.white {
   color: black;
@@ -219,39 +270,45 @@ header.sticky .logo {
   flex-wrap: wrap;
   flex-direction: row;
 }
-.services .content .services-box {
-  padding: 30px 20px;
-  /* background: #0247a0; */
-  /* color: #fff; */
+.service {
   background: white;
   color: black;
-  max-width: 340px;
+  height: 225px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 20px;
-
-  transition: 0.5s;
+  transition: all 0.7s;
   border: 1px solid #016cf8;
+  border-radius: 10px;
 }
-.services .content .services-box:hover {
+.service:hover {
   background: #016cf8;
   color: white;
 }
-.services .content .services-box img {
-  max-width: 100px;
-  filter: inver(1);
+.service img {
+  padding-top: 20px;
+  width: 120px;
+  object-fit: contain;
 }
-.services .content .services-box h2 {
-  font-size: 20px;
+
+.service-image {
+  margin-top: -15px;
+}
+.service h2 {
+  text-align: center;
+  font-size: 24px;
   font-weight: 600;
+  padding: 0 5px;
+  padding-bottom: 20px;
 }
 
 /* --------- contact ----------- */
 
 .contact {
-  background: #dfdede;
+  background-color: rgb(231, 240, 255);
 }
 
 .contact-content {
@@ -361,7 +418,7 @@ header.sticky .logo {
   }
   .menu {
     position: fixed;
-    top: 81px;
+    top: 80px;
     left: -100%;
     display: flex;
     flex-direction: column;
@@ -373,20 +430,22 @@ header.sticky .logo {
     z-index: 4;
     /* border-top: 1px solid rgba(0, 0, 0, 0.2); */
     border-bottom: 1px solid black;
-    background: rgb(153, 194, 255);
+    background: rgb(208, 227, 255);
+  }
+
+  .menu-link {
+    color: black;
   }
   .menu.active {
     left: 0;
   }
-  header ul li a {
+
+  .menu.active li a {
     color: #111;
     font-size: 1.5rem;
     margin: 10px;
   }
 
-  header ul li a:hover {
-    color: white;
-  }
   .toggle {
     width: 40px;
     height: 40px;
@@ -396,6 +455,7 @@ header.sticky .logo {
     background-size: 30px;
     cursor: pointer;
     color: white;
+    filter: invert(1);
   }
   .toggle.active {
     background: url("./assets/menu-close.png");
@@ -404,15 +464,20 @@ header.sticky .logo {
     background-size: 25px;
     cursor: pointer;
   }
-  /* header.sticky .toggle {
-        filter: invert(1);
-    } */
+  header.sticky .toggle {
+    filter: invert(1);
+  }
   section {
     padding: 100px 50px;
   }
   .banner {
     padding: 150px 50px 100px;
   }
+  .banner__text-box {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
   .banner h2 {
     font-size: 3rem;
   }
@@ -461,6 +526,29 @@ header.sticky .logo {
   }
   .banner h3 {
     font-size: 1.75rem;
+  }
+  .about__content-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .about__content-infoPoint {
+    font-size: 22px;
+    line-height: 30px;
+    margin: 1rem 0;
+    align-items: center;
+    text-align: justify;
+    width: 80%;
+    padding-right: 20px;
+    min-width: 250px;
+    margin: 1rem auto;
+  }
+
+  .about__content-info img {
+    width: 80%;
+    min-width: 250px;
+    object-fit: cover;
+    margin: 1rem auto;
   }
 }
 

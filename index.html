@@ -23,10 +23,10 @@
       <ul class="menu">
         <!-- <li><a href="#home" onclick="toggleMenu()">Home</a></li> -->
 
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#services" onclick="toggleMenu()">Services</a></li>
-        <li><a href="">Coastal Smiles</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <li><a href="#about" onclick="toggleMenu()" class="menu-link">About</a></li>
+        <li><a href="#services" onclick="toggleMenu()" class="menu-link">Services</a></li>
+        <li><a href="" class="menu-link">Coastal Smiles</a></li>
+        <li><a href="#contact" onclick="toggleMenu()" class="menu-link">Contact</a></li>
       </ul>
     </header>
 
@@ -51,82 +51,98 @@
             high-quality dentures around Sechelt, BC. With over 40 years of
             experience, we have all the necessary skills to personalize our
             services to your specific needs.
-            <br />Whether you need a complete or partial denture, denture
-            repairs, denture adjustments, our denturist, Ken McEwen can help
+          </p>
+          <img src="assets/reception1.jpg" />
+        </div>
+        <div class="about__content-info">
+            <p class="about__content-infoPoint">Whether you need a complete or partial denture, denture
+            repairs, or denture adjustments, our denturist, Ken McEwen can help
             fulfill your needs while keeping you at ease. To get your smile
             back, make an appointment with Ken McEwen Denture Clinic today!
           </p>
+          <img src="assets/waiting-area.jpg" />
         </div>
         <div class="about__content-images">
-          <img src="./assets/denture.jpg" />
-          <img
-            src="https://images.unsplash.com/photo-1597374399680-b77d907ae7e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-          />
+          <!-- <img
+            src="./assets/waiting-area.jpg"
+          /> -->
         </div>
-        <p class="about__content-infoPoint">
-          We make all our dentures on site.
-        </p>
-        <p class="about__content-infoPoint">
-          We also work closely alongside an independant Dental Hygienist, Monica
-          Maletz, at Coastal Smiles.
-          <a href="https://www.coastalsmiles.ca/" target="_blank"
-            >View her website here</a
-          >
-        </p>
-        <p class="about__content-infoPoint">
-          All dental insurance plans are accepted.
-        </p>
+        <div class="about__content-info">
+          <p class="about__content-infoPoint">
+            We also work closely alongside an independant Dental Hygienist, Monica
+            Maletz, at Coastal Smiles.
+            You can view her website <a href="https://www.coastalsmiles.ca/" target="_blank">here</a>.
+          </p>
+          <img src="./assets/officeFront.jpg">
+        </div>
+        
+        <div class="about__content-extraInfo">
+          <div class="about__content-subPoint">
+            <p>
+              We make all our dentures on site.
+            </p>
+            <img src="./assets/denture.jpg" class="denture-image" />
+          </div>
+          <div class="about__content-subPoint">
+            <p>
+              We accept all dental insurance plans.
+            </p>
+            <img class="certificate" src="assets/insurance.png" alt="" />
+          </div>
+        </div>
+        
       </div>
     </section>
 
     <div class="dabc-logo">
       <img src="assets/DABC-Logo.jpg" alt="" />
+      
     </div>
     <section class="services" id="services">
       <div class="heading white">
-        <h2>Our Services</h2>
-        <p>Services to help you smile your best again</p>
+        <h2>Services we offer to help you smile your best again!</h2>
+        <!-- <p>Services to help you smile your best again</p> -->
       </div>
       <div class="content">
-        <div class="services-box">
-          <img src="./assets/dentures.png" />
+        <div class="service">
+          <img src="./assets/dentures.png" class="denture-image" />
           <h2>Relines and Soft Liners</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            similique quos ad voluptatibus.
-          </p>
+          <!-- <p>
+            Soft Liners are a medical grade, soft polymer material applied to the 
+            hard denture base, and behave like a shock-absorbing cushion when you are chewing. 
+          </p> -->
         </div>
-        <div class="services-box">
-          <img src="./assets/sparkling-teeth.png" />
+        <div class="service">
+          <img src="./assets/sparkling-teeth.png"  class='service-image' />
           <h2>Denture Polishing</h2>
-          <p>
+          <!-- <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             similique quos ad voluptatibus.
-          </p>
+          </p> -->
         </div>
-        <div class="services-box">
+        <div class="service">
           <img src="./assets/teeth.png" />
           <h2>Denture Adjustments and Repairs</h2>
-          <p>
+          <!-- <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             similique quos ad voluptatibus.
-          </p>
+          </p> -->
         </div>
-        <div class="services-box">
-          <img src="./assets/top-teeth.png" />
+        <div class="service">
+          <img src="./assets/service-image copy.png" />
           <h2>Dentures over Implants</h2>
-          <p>
+          <!-- <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             similique quos ad voluptatibus.
-          </p>
+          </p> -->
         </div>
-        <div class="services-box">
-          <img src="./assets/partial-denture.png" />
+        <div class="service">
+          <img src="./assets/partial-denture.png" class="service-image" />
           <h2>Complete and Partial Dentures</h2>
-          <p>
+          <!-- <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             similique quos ad voluptatibus.
-          </p>
+          </p> -->
         </div>
       </div>
     </section>
@@ -200,7 +216,7 @@
       <p>Copyright &copy; 2020 Business Goose Designs. All Rights Reserved.</p>
     </div>
 
-    <!-- <script src="nav-scroll.js" async defer></script> -->
+    <script src="nav-scroll.js" async defer></script>
     <script src="toggle-menu.js" async defer></script>
   </body>
 </html>
